@@ -1,0 +1,142 @@
+/* Reset básico */
+body {
+  font-family: Arial, sans-serif;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header fixo */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #1f2937; /* cinza escuro */
+  color: white;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  z-index: 50;
+}
+header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0;
+}
+nav a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: #d1d5db; /* cinza claro */
+}
+nav a.whatsapp-float img {
+  width: 24px;
+  vertical-align: middle;
+}
+
+/* Espaço para o header fixo */
+body > section:first-of-type {
+  margin-top: 5rem; /* altura do header */
+}
+
+/* Banner */
+section.banner {
+  height: 16rem;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+section.banner h2 {
+  background-color: rgba(0,0,0,0.5);
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Container padrão */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Seções */
+section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* Títulos */
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Lista */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Background cinza claro para seções específicas */
+.bg-gray-100 {
+  background-color: #f3f4f6;
+}
+
+/* Formulário */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+}
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+form button {
+  background-color: #1f2937;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+form button:hover {
+  background-color: #374151;
+}
+
+/* Footer */
+footer {
+  background-color: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
