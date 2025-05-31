@@ -1,3 +1,14 @@
+@keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+  }
+
+
+
 /* Reset básico */
 body {
   font-family: Arial, sans-serif;
@@ -11,11 +22,12 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #1f2937; /* cinza escuro */
+  background-color: #1f2937;
   color: white;
-  padding: 1rem;
+  padding: 0px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   z-index: 50;
+  
 }
 header .container {
   max-width: 1200px;
@@ -25,9 +37,13 @@ header .container {
   align-items: center;
 }
 header h1 {
-  font-size: 1.25rem;
-  font-weight: bold;
-  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin-left: 100px;
+  
+  
 }
 nav a {
   color: white;
@@ -38,9 +54,16 @@ nav a {
 nav a:hover {
   color: #d1d5db; /* cinza claro */
 }
-nav a.whatsapp-float img {
-  width: 24px;
+nav a.whatsapp-icone img {
+  width: 50px;
   vertical-align: middle;
+  animation: pulse 2s infinite;
+}
+#logo-driely {
+  width: 150px;
+  height: 100px;
+  transform: scale(2.2);
+
 }
 
 /* Espaço para o header fixo */
