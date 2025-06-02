@@ -69,24 +69,61 @@ body > section:first-of-type {
 }
 
 /* Banner */
-section.banner {
-  height: 16rem;
+.hero-principal {
+  position: relative;
+  height: 80vh;
+  background: linear-gradient(to right, #1f2937 0%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0.5) 60%, #1f2937 100%),
+              url('../imagens/dri2.jpeg') center center no-repeat;
   background-size: cover;
-  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   text-align: center;
-  padding: 1rem;
 }
-section.banner h2 {
-  background-color: rgba(0,0,0,0.5);
-  padding: 1rem;
-  font-size: 2rem;
+
+.hero-overlay {
+  padding: 2rem;
+  backdrop-filter: brightness(0.9);
+}
+
+.hero-conteudo h2 {
+  font-size: 2.5rem;
   font-weight: bold;
-  margin: 0;
+  margin-bottom: 1rem;
 }
+
+.hero-conteudo p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-conteudo .atende-br {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.btn-whatsapp {
+  margin-top: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  background-color: #25D366;
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s;
+  font-size: 1.1rem;
+}
+.btn-whatsapp img {
+  width: 24px;
+  margin-right: 10px;
+}
+.btn-whatsapp:hover {
+  background-color: #1ebe5d;
+}
+
 
 /* Container padrão */
 .container {
@@ -142,6 +179,51 @@ h4 {
 .bg-gray-100 {
   background-color: #f3f4f6;
 }
+/* Equipe */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #000000;
+}
+
+.equipe {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.item {
+    position: relative;
+    overflow: hidden;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.texto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.texto p {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .equipe {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* Avaliações */
 
 /* Contato */
 .info-contato.card {
