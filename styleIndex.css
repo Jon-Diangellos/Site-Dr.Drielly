@@ -161,6 +161,7 @@ body > section:first-of-type {
 html, body {
   overflow-x: hidden;
 }
+
 /* Responsividade para telas até 768px (celulares e tablets) */
 
 @media (max-width: 768px) {
