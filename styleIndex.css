@@ -109,6 +109,36 @@ nav a.whatsapp-icone img {
 body > section:first-of-type {
   margin-top: 5rem;
 }
+/* Responsividade para telas até 768px (celulares e tablets) */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  #logo-driely {
+    width: 120px;
+    height: auto;
+    transform: scale(1); /* remove o exagero */
+    margin-bottom: 10px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    margin: 10px 0;
+    font-size: 1rem;
+  }
+
+  nav a.whatsapp-icone img {
+    width: 40px;
+  }
+}
 
 /* Banner */
 .hero-principal {
