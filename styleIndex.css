@@ -115,7 +115,7 @@ body > section:first-of-type {
   position: relative;
   height: 80vh;
   background: linear-gradient(to right, #1f2937 0%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0.5) 60%, #1f2937 100%),
-              url('../imagens/dri2.jpeg') center center no-repeat;
+              url('imagens/dri2.jpeg') center center no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
