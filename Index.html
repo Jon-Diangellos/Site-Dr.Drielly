@@ -20,7 +20,7 @@
         <a href="#sobre">Sobre</a>
         <a href="#areas">Áreas</a>
         <a href="#equipe">Equipe</a>
-        <a href="#blog">Blog</a>
+        <a href="#avaliacoes">Avaliações</a>
         <a href="#contato">Contato</a>
         <a href="https://wa.me/5561999942091" class="whatsapp-icone" target="_blank">
           <img src="imagens/whats.png" alt="WhatsApp" />
@@ -98,15 +98,42 @@
 </section>
 
 
-  <!-- Blog -->
-  <section class="avaliacoes">
-    <div class="slider">
-        <div class="slide">"Ótimo atendimento, muito profissional!" - Cliente A</div>
-        <div class="slide">"Recomendo demais, super atenciosos." - Cliente B</div>
-        <div class="slide">"Excelente serviço, resolveu meu problema rapidamente!" - Cliente C</div>
-        <div class="slide">"Equipe preparada e competente!" - Cliente D</div>
+  <!-- Avaliacoes -->
+<section id="avaliacoes" class="container">
+  <h3>Avaliações de Clientes</h3>
+  <div class="carrossel-avaliacoes">
+    <div class="avaliacao-box ativo">
+      <h4>Maria</h4>
+      <div class="foto-cliente"><img src="imagens/cliente2.jpg" alt="Cliente Maria" /></div>
+      <p class="comentario">"Excelente atendimento, muito profissional."</p>
     </div>
+
+    <div class="avaliacao-box">
+      <h4>João</h4>
+      <div class="foto-cliente"><img src="imagens/cliente1.jpg" alt="Cliente João" /></div>
+      <p class="comentario">"Resolveu meu caso rapidamente, recomendo."</p>
+    </div>
+
+    <div class="avaliacao-box">
+      <h4>Ana</h4>
+      <div class="foto-cliente"><img src="imagens/cliente3.jpg" alt="Cliente Ana" /></div>
+      <p class="comentario">"Atendimento humanizado, me senti muito acolhida."</p>
+    </div>
+
+    <div class="avaliacao-box">
+      <h4>Pedro</h4>
+      <div class="foto-cliente"><img src="imagens/cliente4.jpg" alt="Cliente Pedro" /></div>
+      <p class="comentario">"Transparência e comprometimento do início ao fim."</p>
+    </div>
+
+    <div class="avaliacao-box">
+      <h4>Juliana</h4>
+      <div class="foto-cliente"><img src="imagens/cliente5.jpg" alt="Cliente Juliana" /></div>
+      <p class="comentario">"A Dra. Driely foi maravilhosa. Muito obrigada!"</p>
+    </div>
+  </div>
 </section>
+
 
   <!-- Contato -->
   <section class="contato" id="contato">
@@ -130,6 +157,20 @@
   <footer id="footer">
     &copy; 2025 Driely Marques Advocacia. Todos os direitos reservados.
   </footer>
+
+  <!-- Scripts -->
+  <script>
+  const boxes = document.querySelectorAll('.avaliacao-box');
+  let current = 0;
+
+  function trocarAvaliacao() {
+    boxes[current].classList.remove('ativo');
+    current = (current + 1) % boxes.length;
+    boxes[current].classList.add('ativo');
+  }
+
+  setInterval(trocarAvaliacao, 5000);
+</script>
 
 </body>
 </html>
