@@ -110,6 +110,7 @@ body > section:first-of-type {
   margin-top: 5rem;
 }
 /* Responsividade para telas até 768px (celulares e tablets) */
+
 @media (max-width: 768px) {
   header .container {
     flex-direction: column;
