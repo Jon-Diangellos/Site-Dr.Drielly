@@ -164,34 +164,47 @@ html, body {
 
 /* Responsividade para telas até 768px (celulares e tablets) */
 
-@media (max-width: 768px) {
-  header .container {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-  }
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1f2937;
+  z-index: 1000;
+}
 
-  #logo-driely {
-    width: 120px;
-    height: auto;
-    transform: scale(1); /* remove o exagero */
-    margin-bottom: 10px;
-  }
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  position: relative;
+}
 
-  nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+#logo-driely {
+  height: 40px;
+}
 
-  nav a {
-    margin: 10px 0;
-    font-size: 1rem;
-  }
+header nav {
+  display: flex;
+  gap: 10px;
+}
 
-  nav a.whatsapp-icone img {
-    width: 40px;
-  }
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 5px;
+}
+
+header nav .whatsapp-icone {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+header nav .whatsapp-icone img {
+  height: 30px;
 }
 
 /* Banner */
