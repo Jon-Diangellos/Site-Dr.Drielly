@@ -95,12 +95,6 @@ nav a:hover {
   color: #d1d5db;
 }
 
-nav a.whatsapp-icone img {
-  width: 25px;
-  vertical-align: middle;
-  animation: pulse 2s infinite;
-}
-
 #logo-driely {
   width: 150px;
   height: 100px;
@@ -194,6 +188,7 @@ header .container {
   text-decoration: none;
   transition: background 0.3s;
   font-size: 1.1rem;
+  animation: pulse 2s infinite;
 }
 .btn-whatsapp img {
   width: 24px;
