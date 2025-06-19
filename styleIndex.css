@@ -111,7 +111,28 @@ nav a.whatsapp-icone img {
 /* Prevenção de corte lateral em qualquer resolução */
 
 html, body {
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
   overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+p, h1, h2, h3, span, a {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Responsividade para telas até 768px (celulares e tablets) */
