@@ -163,15 +163,6 @@ header nav a {
   padding: 5px;
 }
 
-header nav .whatsapp-icone {
-  position: absolute;
-  left: 49%;
-  transform: translateX(-50%);
-}
-
-header nav .whatsapp-icone img {
- height: 25px;
-}
 
 /* Banner */
 .hero-principal {
