@@ -97,7 +97,7 @@ nav a:hover {
 }
 
 nav a.whatsapp-icone img {
-  width: 50px;
+  width: 30px;
   vertical-align: middle;
   animation: pulse 2s infinite;
 }
@@ -118,42 +118,6 @@ header.transparent {
 
 body > section:first-of-type {
   margin-top: 8rem; 
-}
-
-/* Responsividade para telas até 768px (celulares e tablets) */
-
-@media (max-width: 768px) {
-  header .container {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-  }
-
-  #logo-driely {
-    width: 120px;
-    height: auto;
-    transform: scale(1); 
-    margin-bottom: 10px;
-  }
-
-  nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav a {
-    margin: 10px 0;
-    font-size: 1rem;
-  }
-
-  nav a.whatsapp-icone img {
-    width: 40px;
-  }
-
-  body > section:first-of-type {
-    margin-top: 11rem; 
-  }
 }
 
 /* Prevenção de corte lateral em qualquer resolução */
@@ -182,7 +146,9 @@ header .container {
 }
 
 #logo-driely {
-  height: 40px;
+  width: 108px;
+  height: 108px;
+  transform: scale(1.8);
 }
 
 header nav {
@@ -199,12 +165,12 @@ header nav a {
 
 header nav .whatsapp-icone {
   position: absolute;
-  left: 50%;
+  left: 49%;
   transform: translateX(-50%);
 }
 
 header nav .whatsapp-icone img {
- height: 30px;
+ height: 25px;
 }
 
 /* Banner */
