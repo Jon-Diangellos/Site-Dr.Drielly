@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Post — Blog Minimal</title>
+
+  <link rel="stylesheet" href="css/tailwind.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-white shadow">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white font-bold">B</div>
+        <div><h1 class="text-lg font-semibold">Blog Minimal</h1></div>
+      </a>
+      <nav class="hidden md:block">
+        <a href="index.html" class="text-gray-700 hover:text-green-600">Início</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-12">
+    <article id="post-article" class="bg-white rounded-lg shadow p-6">
+      <!-- Conteúdo do post será inserido dinamicamente -->
+      <div id="post-content" class="prose max-w-none"></div>
+    </article>
+  </main>
+
+  <footer class="py-6 text-center text-gray-500">
+    <a href="index.html" class="text-green-600">← Voltar aos posts</a>
+  </footer>
+
+  <script src="js/posts.js"></script>
+  <script>
+    // Pega query param ?id=xxx
+    function getQueryParam(name) {
+      const url = new URL(window.location);
+      return url.searchParams.get(name);
+    }
+
+    // Rendeiza o post baseado no id (espera que posts.js disponibilize fetchPosts())
+    (async () => {
+      const id = getQueryParam('id');
+      if (!id) {
+        document.getElementById('post-content').innerHTML = '<p class="text-red-500">Post não informado.</p>';
+        return;
+      }
+
+      try {
+        const posts = await fetchPosts();
+        const post = posts.find(p => String(p.id) === String(id) || p.slug === id);
+        if (!post) {
+          document.getElementById('post-content').innerHTML = '<p class="text-red-500">Post não encontrado.</p>';
+          return;
+        }
+
+        // Cria HTML do post
+        const html = `
+          <h1 class="text-3xl font-bold mb-2">${escapeHtml(post.title)}</h1>
+          <div class="text-sm text-gray-500 mb-6">Por <strong>${escapeHtml(post.author)}</strong> • ${escapeHtml(post.date)}</div>
+          <div class="mb-6">${post.cover ? `<img src="${post.cover}" alt="${escapeHtml(post.title)}" class="w-full rounded mb-6" />` : ''}</div>
+          <div class="prose">${post.content}</div>
+          <div class="mt-8">
+            <p class="text-sm text-gray-600">Tags: ${post.tags.map(t => `<span class="inline-block bg-gray-100 px-2 py-1 rounded text-sm mr-2">${escapeHtml(t)}</span>`).join('')}</p>
+          </div>
+        `;
+        document.getElementById('post-content').innerHTML = html;
+      } catch (err) {
+        console.error(err);
+        document.getElementById('post-content').innerHTML = '<p class="text-red-500">Erro ao carregar o post.</p>';
+      }
+
+      // pequena função de escape para evitar injeção em campos simples
+      function escapeHtml(str) {
+        if (!str) return '';
+        return String(str)
+          .replaceAll('&', '&amp;')
+          .replaceAll('<', '&lt;')
+          .replaceAll('>', '&gt;')
+          .replaceAll('"', '&quot;')
+          .replaceAll("'", '&#039;');
+      }
+    })();
+  </script>
+</body>
+</html>

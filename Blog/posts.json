@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "slug": "como-criar-um-blog-minimal",
+    "title": "Como criar um blog minimal",
+    "date": "2025-11-15",
+    "author": "Jonathas",
+    "tags": ["web", "design", "tailwind"],
+    "cover": "",
+    "content": "<p>Este é um post de exemplo. Ele mostra como organizar um blog simples usando HTML, CSS, JavaScript e Tailwind.</p><h2>Passos</h2><ul><li>Configurar a estrutura de arquivos</li><li>Adicionar posts em JSON</li><li>Carregar dinamicamente com JS</li></ul><p>Você pode inserir imagens, listas, blocos de código etc. O conteúdo aqui é HTML permitido.</p>"
+  },
+  {
+    "id": 2,
+    "slug": "produtividade-para-devs",
+    "title": "Produtividade para devs: dicas práticas",
+    "date": "2025-10-01",
+    "author": "Jonathas",
+    "tags": ["produtividade", "carreira"],
+    "cover": "",
+    "content": "<p>Neste post, discutimos métodos simples para aumentar a produtividade no dia a dia de um desenvolvedor.</p><h2>Dicas</h2><ol><li>Priorize tarefas</li><li>Use blocos de tempo</li><li>Descanse regularmente</li></ol>"
+  }
+]

@@ -1,0 +1,16 @@
+/* Arquivo para customizações mínimas adicionais.
+   Use classes Tailwind sempre que possível. */
+
+/* Exemplo: pequenas regras para a tipografia com .prose quando necessário */
+.prose img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Ajuste simples para containers (opcional) */
+.container {
+  max-width: 1100px;
+}
+
+/* Você pode adicionar seu toque visual aqui */

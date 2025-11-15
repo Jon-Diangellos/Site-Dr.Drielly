@@ -1,0 +1,8 @@
+/* Arquivo que referencia a build CDN do Tailwind para simplicidade.
+   Em produção é recomendado compilar seu Tailwind localmente, mas para
+   testes rápidos o import abaixo funciona bem. */
+
+@import url("https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css");
+
+/* Se quiser usar a versão oficial via script CDN, basta incluir
+   <script src='https://cdn.tailwindcss.com'></script> no HEAD */
